@@ -5,7 +5,7 @@ The processing of sattelite data for vessel trajectory preprocessing and trip ex
 
 
 <p align="center">
-  <img  src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/trip_extraction.png" width="420" height="250" hspace="30"/>
+  <img  src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/trip_extraction.png" width="420" height="250" hspace="20"/>
   
   <img  src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/demo-output.gif" width="360" height="250" />
 </p>
