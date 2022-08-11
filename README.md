@@ -28,6 +28,7 @@ The function of *noise detection* is provided.
   <img alt="Trajectory Noise Filtered" src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/noise_filtered.png" width="360" height="250" />
 </p>
 
+
 ## Stay Point Detection
 
 The function of *stay point detection* is provided. 
@@ -38,3 +39,17 @@ The function of *stay point detection* is provided.
 <p align="center">
   <img src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/port_detection.png" width="460" height="250" />
 </p>
+
+
+## Port Detection
+
+The port detection detect the previously clustered stay points and determines whether they are within a port positions. As known in the process of this notebook, in a lot of cases vessels won't directly went into the port but stay near it for a while. Hence, there is a need to recognize the stay points as ported or not.
+
+## Segmentation
+
+### Label the trajectories by trip and ports
+Add a column **Segments** to identify the trip of the trajectories. For example, a trajectory with 3 trips can be labeled as:  
+ * *Moving*(1) --> **Port**(2) --> *Moving*(3) --> **Port**(4) --> *Moving*(5) --> **Port**(6)
+
+### Segment by created labels
+The function in this part turn the trajectory into sub-trajectories(trips) using the previously defined *Segment* column. We store the segmented sub-trajectories in a dictionary called **trips**. To call on of the trip, we can simply use **trips[i]**, where *i* denotes the index of the trips the vessel is at through out the 3 months time span (the duration of our raw AIS data).
