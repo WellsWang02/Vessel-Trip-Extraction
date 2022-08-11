@@ -27,3 +27,14 @@ The function of *noise detection* is provided.
   
   <img alt="Trajectory Noise Filtered" src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/noise_filtered.png" width="360" height="250" />
 </p>
+
+## Stay Point Detection
+
+The function of *stay point detection* is provided. 
+* Done with new parameters **DBSCAN:** eps=400, min_samples=4
+* Successfully recognize the missed stay points, and reduced the number of clusters by combining the nearby sub-clusters.
+* The cluster would generate a new column called *Cluster*, where **Cluster=0,1,2....** means *stay points* are clustered as different numbers, while **Cluster=-1** means the points is detected as *on the way* (non-stay points).
+
+<p align="center">
+  <img src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/port_detection.png" width="460" height="250" />
+</p>
