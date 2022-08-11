@@ -36,14 +36,15 @@ The function of *stay point detection* is provided.
 * Successfully recognize the missed stay points, and reduced the number of clusters by combining the nearby sub-clusters.
 * The cluster would generate a new column called *Cluster*, where **Cluster=0,1,2....** means *stay points* are clustered as different numbers, while **Cluster=-1** means the points is detected as *on the way* (non-stay points).
 
-<p align="center">
-  <img src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/port_detection.png" width="460" height="250" />
-</p>
 
 
 ## Port Detection
 
 The port detection detect the previously clustered stay points and determines whether they are within a port positions. As known in the process of this notebook, in a lot of cases vessels won't directly went into the port but stay near it for a while. Hence, there is a need to recognize the stay points as ported or not.
+
+<p align="center">
+  <img src="https://github.com/WellsWang02/Vessel-Trip-Extraction/blob/main/port_detection.png" width="460" height="250" />
+</p>
 
 ## Segmentation
 
